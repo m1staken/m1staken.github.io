@@ -48,10 +48,12 @@
             font-size: 1.2em;
             margin: 5px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, background-color 0.2s; /* добавлено для плавности изменения цвета */
         }
+
         .day-circle:hover {
             transform: scale(1.1);
+            background-color: rgb(192, 106, 208); /* кружок становится белым при наведении */
         }
         .schedule { 
             display: none; /* Скрываем карточки сначала */
