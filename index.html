@@ -159,6 +159,25 @@
             font-size: 1.8em;
             text-align: center;
         }
+        .day-circle-ekz {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(221, 23, 23, 0.67);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .day-circle-ekz:hover {
+            transform: scale(1.1);
+            background-color: rgba(222, 22, 22, 0.39);
+        }
+
         .kons {
             background-color: rgba(215, 181, 109, 0.86);
             border-radius: 10px;
@@ -177,6 +196,25 @@
             margin-bottom: 10px;
             font-size: 1.8em;
             text-align: center;
+        }
+        .day-circle-kons {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(215, 181, 109, 0.86);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .day-circle-kons:hover {
+            transform: scale(1.1);
+            background-color: rgba(224, 190, 118, 0.57);
         }
     </style>
 </head>
@@ -658,25 +696,25 @@
             <div class="day-circle" onclick="showSchedule('109')">9</div>
         </div>
         <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('1010')">10</div>
+            <div class="day-circle-ekz" onclick="showSchedule('1010')">10</div>
             <div class="day-circle" onclick="showSchedule('1011')">11</div>
             <div class="day-circle" onclick="showSchedule('1012')">12</div>
-            <div class="day-circle" onclick="showSchedule('1013')">13</div>
+            <div class="day-circle-kons" onclick="showSchedule('1013')">13</div>
             <div class="day-circle" onclick="showSchedule('1014')">14</div>
-            <div class="day-circle" onclick="showSchedule('1015')">15</div>
+            <div class="day-circle-ekz" onclick="showSchedule('1015')">15</div>
             <div class="day-circle" onclick="showSchedule('1016')">16</div>
         </div>
         <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('1017')">17</div>
             <div class="day-circle" onclick="showSchedule('1018')">18</div>
-            <div class="day-circle" onclick="showSchedule('1019')">19</div>
+            <div class="day-circle-ekz" onclick="showSchedule('1019')">19</div>
             <div class="day-circle" onclick="showSchedule('1020')">20</div>
             <div class="day-circle" onclick="showSchedule('1021')">21</div>
             <div class="day-circle" onclick="showSchedule('1022')">22</div>
             <div class="day-circle" onclick="showSchedule('1023')">23</div>
         </div>
         <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('1024')">24</div>
+            <div class="day-circle-ekz" onclick="showSchedule('1024')">24</div>
             <div class="day-circle" onclick="showSchedule('1025')">25</div>
             <div class="day-circle" onclick="showSchedule('1026')">26</div>
             <div class="day-circle" onclick="showSchedule('1027')">27</div>
