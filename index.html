@@ -16,7 +16,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Центрируем содержимое по горизонтали */
+            align-items: center; 
         }
         h1 {
             text-align: center;
@@ -34,7 +34,7 @@
             justify-content: space-around;
             flex-wrap: wrap;
             flex-direction: column;
-            align-items: center; /* Центрируем кружки по горизонтали */
+            align-items: center; 
         }
         .day-circle {
             width: 45px;
@@ -48,18 +48,18 @@
             font-size: 1.2em;
             margin: 5px;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s; /* добавлено для плавности изменения цвета */
+            transition: transform 0.2s, background-color 0.2s;
         }
 
         .day-circle:hover {
             transform: scale(1.1);
-            background-color: rgb(192, 106, 208); /* кружок становится белым при наведении */
+            background-color: rgb(192, 106, 208);
         }
         .schedule { 
-            display: none; /* Скрываем карточки сначала */
+            display: none; 
         }
         .card.active {
-            display: block; /* Показываем активную карточку */
+            display: block;
         }
         .day-circle-row {
             display: flex;
@@ -97,8 +97,8 @@
             margin-bottom: 18px; 
         }
         .flower {
-            font-size: 1.5em; /* Размер цветочка */
-            color: #ff66b3; /* Розовый цвет цветочка */
+            font-size: 1.5em;
+            color: #ff66b3;
         }
         .circle {
             display: inline-block;
@@ -120,681 +120,570 @@
         .hz {
             background-color: rgb(244, 241, 241); 
         }
+        .ekz {
+            background-color: rgba(221, 23, 23, 0.67);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.3s;
+            color: white;
+        }
+        .ekz:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .ekz h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .ekz {
+            background-color: rgba(221, 23, 23, 0.67);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.3s;
+            color: white;
+        }
+        .ekz:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .ekz h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .kons {
+            background-color: rgba(215, 181, 109, 0.86);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.3s;
+            color: white;
+        }
+        .kons:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .kons h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Ноябрь 2024</h1>
+    <h1>Январь 2025</h1>
     <div class="container">
         <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('0')"></div> 
-            <div class="day-circle" onclick="showSchedule('0')"></div> 
-            <div class="day-circle" onclick="showSchedule('0')"></div> 
-            <div class="day-circle" onclick="showSchedule('0')"></div> 
+            <div class="day-circle" onclick="showSchedule('0')"></div>
+            <div class="day-circle" onclick="showSchedule('0')"></div>
             <div class="day-circle" onclick="showSchedule('1')">1</div>
             <div class="day-circle" onclick="showSchedule('2')">2</div>
             <div class="day-circle" onclick="showSchedule('3')">3</div>
-        </div>        
-        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('4')">4</div>
             <div class="day-circle" onclick="showSchedule('5')">5</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('6')">6</div>
             <div class="day-circle" onclick="showSchedule('7')">7</div>
             <div class="day-circle" onclick="showSchedule('8')">8</div>
             <div class="day-circle" onclick="showSchedule('9')">9</div>
             <div class="day-circle" onclick="showSchedule('10')">10</div>
-        </div>
-        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('11')">11</div>
             <div class="day-circle" onclick="showSchedule('12')">12</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('13')">13</div>
             <div class="day-circle" onclick="showSchedule('14')">14</div>
             <div class="day-circle" onclick="showSchedule('15')">15</div>
             <div class="day-circle" onclick="showSchedule('16')">16</div>
             <div class="day-circle" onclick="showSchedule('17')">17</div>
-        </div>
-        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('18')">18</div>
             <div class="day-circle" onclick="showSchedule('19')">19</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('20')">20</div>
             <div class="day-circle" onclick="showSchedule('21')">21</div>
             <div class="day-circle" onclick="showSchedule('22')">22</div>
             <div class="day-circle" onclick="showSchedule('23')">23</div>
             <div class="day-circle" onclick="showSchedule('24')">24</div>
-        </div>
-        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('25')">25</div>
             <div class="day-circle" onclick="showSchedule('26')">26</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('27')">27</div>
             <div class="day-circle" onclick="showSchedule('28')">28</div>
             <div class="day-circle" onclick="showSchedule('29')">29</div>
             <div class="day-circle" onclick="showSchedule('30')">30</div>
-            <div class="day-circle" onclick="showSchedule('0')"></div> 
+            <div class="day-circle" onclick="showSchedule('31')">31</div>
+            <div class="day-circle" onclick="showSchedule('0')"></div>
+            <div class="day-circle" onclick="showSchedule('0')"></div>
 
-        </div>        
+        </div>
     </div>
 
     <div id="schedule-0" class="schedule">
         <h2>Не туда жмешь 🌸 </h2>
     </div>
     <div id="schedule-1" class="schedule">
-        <div class="card active">
-            <h2>Пятница 01.11.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
+        <div class="card">
+            <h2>Среда <br> 01.01.2025 🌸 <br> Ура отдыхаем! </h2>
         </div>
     </div>
     <div id="schedule-2" class="schedule">
         <div class="card">
-            <h2>Суббота 02.11.2024🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
+            <h2>Четверг 02.01.2025 🌻 <br> Ура отдыхаем! </h2>
         </div>
     </div>
     <div id="schedule-3" class="schedule">
-        <div class="card active"></div>
-            <h2>Воскресенье 03.11.2024 🌸 <br> Ура отдыхаем! </h2>
-        </div>    
+        <div class="card">
+            <h2>Пятница 03.01.2025 🌸 <br> Ура отдыхаем! </h2>
+        </div>
     </div>
     <div id="schedule-4" class="schedule">
-             <h2>Понедельник 04.11.2024 🌸 <br> Ура отдыхаем! </h2>
+        <div class="card">
+            <h2>Суббота 04.01.2025 🌸 <br> Ура отдыхаем! </h2>
+        </div>
     </div>
     <div id="schedule-5" class="schedule">
         <div class="card">
-            <h2>Вторник 05.11.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
+            <h2>Воскресенье 05.01.2025 🌺 <br> Ура отдыхаем! </h2>
         </div>
     </div>
     <div id="schedule-6" class="schedule">
         <div class="card">
-            <h2>Среда <br> 06.11.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М. <b> ауд. 810 </b> (06.11.24-27.11.24)
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
+            <h2>Понедельник<br> 06.01.2025 🌷 <br> Ура отдыхаем! </h2>
         </div>
     </div>
-    
+
     <div id="schedule-7" class="schedule">
         <div class="card">
-            <h2>Четверг 07.11.2024 🌼</h2>
+            <h2>Вторник 07.01.2025 🌼 <br> Ура отдыхаем! </h2>
+        </div>
+    </div>
+
+    <div id="schedule-8" class="schedule">
+        <div class="card">
+            <h2>Среда 08.01.2025 🌸 <br> Ура отдыхаем! </h2>
+        </div>
+    </div>
+
+    <div id="schedule-9" class="schedule">
+        <div class="card">
+            <h2>Четверг 09.01.2025 🌻 </h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (07.11.24-06.02.25)
             </div>
             <div class="subject">
                 <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25)
             </div>
             <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b> (07.11.24-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1105 </b> (19.12.24-06.02.25)
             </div>
         </div>
     </div>
-    
-    <div id="schedule-8" class="schedule">
-        <div class="card">
-            <h2>Пятница 08.11.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24)
-            </div> 
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-9" class="schedule">
-        <div class="card">
-            <h2>Суббота 09.11.2024 🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1208 </b> (09.11.24-07.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-10" class="schedule">
-        <div class="card active">
-            <h2>Воскресенье 10.11.2024 🌸 <br> Ура отдыхаем! </h2>
-        </div>
 
+    <div id="schedule-10" class="schedule">
+        <div class="card">
+            <h2>Пятница 10.01.2025 🌸 </h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (10.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+        </div>
     </div>
-    
+
     <div id="schedule-11" class="schedule">
         <div class="card">
-            <h2>Понедельник 11.11.2024 🌼</h2>
+            <h2>Суббота 11.01.2025 🌼 </h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
+                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А<b> ауд. 216 </b> (21.12.24-01.02.25)
             </div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25)  
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-12" class="schedule">
         <div class="card">
-            <h2>Вторник 12.11.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
+            <h2>Воскресенье 12.01.2025 🌺 <br> Ура отдыхаем! </h2>
         </div>
     </div>
-    
+
     <div id="schedule-13" class="schedule">
         <div class="card">
-            <h2>Среда <br> 13.11.2024 🌷</h2>
+            <h2>Понедельник <br> 13.01.2025 🌷</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М. <b> ауд. 810 </b> (06.11.24-27.11.24)
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 810 </b> (11.11.24-03.02.25)
             </div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (11.11.24-03.02.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-14" class="schedule">
         <div class="card">
-            <h2>Четверг 14.11.2024 🌼</h2>
+            <h2>Вторник 14.01.2025 🌼</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
+                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (05.11.24-04.02.25)
             </div>
             <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b> (17.12.24-04.02.25)
             </div>
             <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b> (05.11.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-15" class="schedule">
         <div class="card">
-            <h2>Пятница 15.11.2024 🌸</h2>
+            <h2>Среда <br> 15.01.2025 🌸</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
+                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 218 </b> (06.11.24-05.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24) 
-            </div> 
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b> (13.11.24-05.02.25)
+            </div>
             <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b> (06.11.24-05.02.25)
+            </div>
             <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
+                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-16" class="schedule">
         <div class="card">
-            <h2>Суббота 16.11.2024 🌻</h2>
+            <h2>Четверг 16.01.2025 🌻</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (07.11.24-06.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24)
+                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (16.01.25-06.02.25)
             </div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b> (07.11.24-06.02.25)
             </div>
             <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1208 </b> (09.11.24-07.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1105 </b> (19.12.24-06.02.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-17" class="schedule">
         <div class="card active">
-            <h2>Воскресенье 17.11.2024 🌸 <br> Ура отдыхаем! </h2>
+            <h2>Пятница 17.01.2025 🌸</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (10.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (17.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (17.01.25-07.02.25)
+            </div>
         </div>
 
     </div>
-    
+
     <div id="schedule-18" class="schedule">
         <div class="card">
-            <h2>Понедельник 18.11.2024 🌼</h2>
+            <h2>Суббота 18.01.2025 🌼</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25)  
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-19" class="schedule">
-        <div class="card">
-            <h2>Вторник 19.11.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-20" class="schedule">
-        <div class="card">
-            <h2>Среда <br> 20.11.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М. <b> ауд. 810 </b> (06.11.24-27.11.24)
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-21" class="schedule">
-        <div class="card">
-            <h2>Четверг 21.11.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-22" class="schedule">
-        <div class="card">
-            <h2>Пятница 22.11.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24) 
-            </div> 
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-23" class="schedule">
-        <div class="card">
-            <h2>Суббота 23.11.2024 🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24) 
+                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А<b> ауд. 216 </b> (21.12.24-01.02.25)
             </div>
             <div class="subject">
                 <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1208 </b> (09.11.24-07.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-24" class="schedule">
-        <div class="card active">
-            <h2>Воскресенье 24.11.2024 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    
-    <div id="schedule-25" class="schedule">
-        <div class="card">
-            <h2>Понедельник 25.11.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25)  
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-26" class="schedule">
-        <div class="card">
-            <h2>Вторник 26.11.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-27" class="schedule">
-        <div class="card">
-            <h2>Среда <br> 27.11.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М. <b> ауд. 810 </b> (06.11.24-27.11.24)
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-28" class="schedule">
-        <div class="card">
-            <h2>Четверг 28.11.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-29" class="schedule">
-        <div class="card">
-            <h2>Пятница 29.11.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24) 
-            </div> 
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-30" class="schedule">
-        <div class="card">
-            <h2>Суббота 30.11.2024 🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1208 </b> (09.11.24-07.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
             </div>
         </div>
     </div>
 
-    <h1>Декабрь 2024</h1>
+    <div id="schedule-19" class="schedule">
+        <div class="card">
+            <h2>Воскресенье 19.01.2025 🌺 <br> Ура отдыхаем! </h2>
+        </div>
+    </div>
+
+    <div id="schedule-20" class="schedule">
+        <div class="card">
+            <h2>Понедельник <br> 20.01.2025 🌷</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 810 </b> (11.11.24-03.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 802 </b> (20.01.25-03.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (11.11.24-03.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-21" class="schedule">
+        <div class="card">
+            <h2>Вторник 21.01.2025 🌼</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (05.11.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b> (17.12.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b> (05.11.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-22" class="schedule">
+        <div class="card">
+            <h2>Среда 22.01.2025 🌸</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 218 </b> (06.11.24-05.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b> (13.11.24-05.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b> (06.11.24-05.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-23" class="schedule">
+        <div class="card">
+            <h2>Четверг 23.01.2025 🌻</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (07.11.24-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (16.01.25-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b> (07.11.24-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1105 </b> (19.12.24-06.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-24" class="schedule">
+        <div class="card active">
+            <h2>Пятница 24.01.2025 🌸 </h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (10.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (17.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (17.01.25-07.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-25" class="schedule">
+        <div class="card">
+            <h2>Суббота 25.01.2025 🌼</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А<b> ауд. 216 </b> (21.12.24-01.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-26" class="schedule">
+        <div class="card">
+            <h2>Воскресенье 26.01.2025 🌺 <br> Ура отдыхаем! </h2>
+        </div>
+    </div>
+
+    <div id="schedule-27" class="schedule">
+        <div class="card">
+            <h2>Понедельник <br> 27.01.2025 🌷</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 810 </b> (11.11.24-03.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 802 </b> (20.01.25-03.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (11.11.24-03.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-28" class="schedule">
+        <div class="card">
+            <h2>Вторник 28.01.2025 🌼</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (05.11.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b> (17.12.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b> (05.11.24-04.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-29" class="schedule">
+        <div class="card">
+            <h2>Среда 29.01.2025 🌸</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 218 </b> (06.11.24-05.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b> (13.11.24-05.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b> (06.11.24-05.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-30" class="schedule">
+        <div class="card">
+            <h2>Четверг 30.01.2025 🌻</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (07.11.24-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (16.01.25-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b> (07.11.24-06.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1105 </b> (19.12.24-06.02.25)
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-31" class="schedule">
+        <div class="card">
+            <h2>Пятница 31.01.2025 🌸</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (10.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (17.01.25-07.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+            </div>
+            <div class="subject">
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (17.01.25-07.02.25)
+            </div>
+        </div>
+    </div>
+
+    <h1>Февраль 2025</h1>
     <div class="container">
         <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
             <div class="day-circle" onclick="showSchedule('100')"></div>
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div>  
+            <div class="day-circle" onclick="showSchedule('100')"></div>
+            <div class="day-circle" onclick="showSchedule('100')"></div>
+            <div class="day-circle" onclick="showSchedule('100')"></div>
+            <div class="day-circle" onclick="showSchedule('100')"></div>
             <div class="day-circle" onclick="showSchedule('101')">1</div>
-        </div>
-        <div class="day-circle-row">    
             <div class="day-circle" onclick="showSchedule('102')">2</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('103')">3</div>
             <div class="day-circle" onclick="showSchedule('104')">4</div>
             <div class="day-circle" onclick="showSchedule('105')">5</div>
             <div class="day-circle" onclick="showSchedule('106')">6</div>
             <div class="day-circle" onclick="showSchedule('107')">7</div>
             <div class="day-circle" onclick="showSchedule('108')">8</div>
-        </div>
-        <div class="day-circle-row">    
             <div class="day-circle" onclick="showSchedule('109')">9</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('1010')">10</div>
             <div class="day-circle" onclick="showSchedule('1011')">11</div>
             <div class="day-circle" onclick="showSchedule('1012')">12</div>
             <div class="day-circle" onclick="showSchedule('1013')">13</div>
             <div class="day-circle" onclick="showSchedule('1014')">14</div>
             <div class="day-circle" onclick="showSchedule('1015')">15</div>
+            <div class="day-circle" onclick="showSchedule('1016')">16</div>
         </div>
         <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('1016')">16</div>
             <div class="day-circle" onclick="showSchedule('1017')">17</div>
             <div class="day-circle" onclick="showSchedule('1018')">18</div>
             <div class="day-circle" onclick="showSchedule('1019')">19</div>
             <div class="day-circle" onclick="showSchedule('1020')">20</div>
             <div class="day-circle" onclick="showSchedule('1021')">21</div>
             <div class="day-circle" onclick="showSchedule('1022')">22</div>
-        </div>
-        <div class="day-circle-row">    
             <div class="day-circle" onclick="showSchedule('1023')">23</div>
+        </div>
+        <div class="day-circle-row">
             <div class="day-circle" onclick="showSchedule('1024')">24</div>
             <div class="day-circle" onclick="showSchedule('1025')">25</div>
             <div class="day-circle" onclick="showSchedule('1026')">26</div>
             <div class="day-circle" onclick="showSchedule('1027')">27</div>
             <div class="day-circle" onclick="showSchedule('1028')">28</div>
-            <div class="day-circle" onclick="showSchedule('1029')">29</div>
-        </div>
-        <div class="day-circle-row">
-            <div class="day-circle" onclick="showSchedule('1030')">30</div>
-            <div class="day-circle" onclick="showSchedule('1031')">31</div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
             <div class="day-circle" onclick="showSchedule('100')"></div>
-            <div class="day-circle" onclick="showSchedule('100')"></div> 
-        </div>        
+            <div class="day-circle" onclick="showSchedule('100')"></div>
+        </div>
     </div>
 
     <div id="schedule-100" class="schedule">
@@ -802,582 +691,268 @@
     </div>
     <div id="schedule-101" class="schedule">
         <div class="card active">
-            <h2>Воскресенье 01.12.2024 🌸 <br> Ура отдыхаем! </h2>
+            <h2>Суббота 01.02.2025 🌸 </h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А<b> ауд. 216 </b> (21.12.24-01.02.25)
+            </div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
+            </div>
         </div>
     </div>
     <div id="schedule-102" class="schedule">
-        <div class="card">
-            <h2>Понедельник 02.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
+        <div class="card active">
+            <h2>Воскресенье 02.02.2025 🌸 <br> Ура отдыхаем! </h2>
         </div>
     </div>
     <div id="schedule-103" class="schedule">
         <div class="card">
-            <h2>Вторник 03.12.2024 🌺</h2>
+            <h2>Понедельник 03.02.2025 🌼</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 810 </b> (11.11.24-03.02.25)
             </div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
+                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 802 </b> (20.01.25-03.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (11.11.24-03.02.25)
             </div>
         </div>
     </div>
     <div id="schedule-104" class="schedule">
         <div class="card">
-            <h2>Среда <br> 04.12.2024 🌷</h2>
+            <h2>Вторник 04.02.2025 🌺</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
+                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (05.11.24-04.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b> (17.12.24-04.02.25)
             </div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b> (05.11.24-04.02.25)
             </div>
             <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
             </div>
         </div>
     </div>
     <div id="schedule-105" class="schedule">
         <div class="card">
-            <h2>Четверг 05.12.2024 🌼</h2>
+            <h2>Среда <br> 05.02.2025 🌷</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
+                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 218 </b> (06.11.24-05.02.25)
             </div>
             <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b> (13.11.24-05.02.25)
             </div>
             <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b> (06.11.24-05.02.25)
             </div>
         </div>
     </div>
     <div id="schedule-106" class="schedule">
         <div class="card">
-            <h2>Пятница 06.12.2024 🌸</h2>
+            <h2>Четверг 06.02.2025 🌼</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
+                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (07.11.24-06.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1008 </b> (01.11.24-06.12.24) 
-            </div> 
+                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b> (16.01.25-06.02.25)
+            </div>
             <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b> (07.11.24-06.02.25)
+            </div>
             <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
+                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1105 </b> (19.12.24-06.02.25)
             </div>
         </div>
     </div>
-    
     <div id="schedule-107" class="schedule">
         <div class="card">
-            <h2>Суббота 07.12.2024 🌻</h2>
+            <h2>Пятница 07.02.2025 🌸</h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
+                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (10.01.25-07.02.25)
             </div>
             <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24) 
+                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 809 </b> (17.01.25-07.02.25)
             </div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
+                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
             </div>
             <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1208 </b> (09.11.24-07.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
+                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b> (17.01.25-07.02.25)
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-108" class="schedule">
         <div class="card">
-            <h2>Воскресенье 08.12.2024 🌸 <br> Ура отдыхаем! </h2>
+            <h2>Суббота 08.02.2025 🌻</h2>
+            <div class="separator"></div>
+            <div class="subject">
+                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
+            </div>
         </div>
     </div>
-    
+
     <div id="schedule-109" class="schedule">
-        <div class="card">
-            <h2>Понедельник 09.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
+        <div class="card active">
+            <h2>Воскресенье 09.02.2025 🌸 <br> Ура отдыхаем! </h2>
         </div>
     </div>
-    
+
     <div id="schedule-1010" class="schedule">
-        <div class="card">
-            <h2>Вторник 10.12.2024 🌺</h2>
+        <div class="ekz">
+            <h2>Понедельник 10.02.2025 🌼 <br> Экзамен <br></h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 907 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Уравнения мат. физики Панкратова О.В.<b> ауд. 1011 </b> (05.11.24-10.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
+                <div class="time">10:00 - 13:00</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 1114 </b>
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-1011" class="schedule">
         <div class="card">
-            <h2>Среда <br> 11.12.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
+            <h2>Вторник 11.02.2025 🌺</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1012" class="schedule">
         <div class="card">
-            <h2>Четверг 12.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
-            </div>
+            <h2>Среда <br> 12.02.2025 🌷</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1013" class="schedule">
-        <div class="card">
-            <h2>Пятница 13.12.2024 🌸</h2>
+        <div class="kons">
+            <h2>Четверг 13.02.2025 🌼 <br> Консультация <br></h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1211 </b> (13.12.24-20.12.24)
-            </div> 
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А.<b> ауд. 1006 </b> (08.11.24-13.12.24)
+                <div class="time">14:00 - 15:00</div> <span class="circle pr">пр</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 1209 </b>
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-1014" class="schedule">
         <div class="card">
-            <h2>Суббота 14.12.2024 🌻</h2>
+            <h2>Пятница 14.02.2025 🌸</h2>
+        </div>
+    </div>
+
+    <div id="schedule-1015" class="schedule">
+        <div class="ekz">
+            <h2>Суббота 15.02.2025 🌻 <br> Экзамен <br></h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web Гилемзянов А.Ф.<b> ауд. 1208 </b> (09.11.24-14.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b> (02.11.24-14.12.24) 
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
+                <div class="time">10:00 - 13:00</div> <span class="circle pr">пр</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 1010 </b>
             </div>
         </div>
     </div>
-    
-    <div id="schedule-1015" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 15.12.2024 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    
+
     <div id="schedule-1016" class="schedule">
         <div class="card">
-            <h2>Понедельник 16.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25)  
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
+            <h2>Воскресенье 16.02.2025 🌸 <br> Ура отдыхаем! </h2>
         </div>
     </div>
-    
+
     <div id="schedule-1017" class="schedule">
         <div class="card">
-            <h2>Вторник 17.12.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1206 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
+            <h2>Понедельник 17.02.2025 🌼</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1018" class="schedule">
         <div class="card">
-            <h2>Среда <br> 18.12.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
+            <h2>Вторник 18.02.2025 🌺</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1019" class="schedule">
-        <div class="card">
-            <h2>Четверг 19.12.2024 🌼</h2>
+        <div class="ekz">
+            <h2>Среда <br> 19.02.2025 🌷 <br> Экзамен <br></h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
+                <div class="time">10:00 - 13:00</div> <span class="circle pr">пр</span> Программирование на Java Маклецов С.В.<b> ауд. 905 </b>
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-1020" class="schedule">
         <div class="card">
-            <h2>Пятница 20.12.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Нейронные сети Гафаров Ф.М.<b> ауд. 1211 </b> (13.12.24-20.12.24) 
-            </div> 
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
+            <h2>Четверг 20.02.2025 🌼</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1021" class="schedule">
         <div class="card">
-            <h2>Суббота 21.12.2024 🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка интернет приложений Прокопьев Н.А.<b> ауд. 216 </b> (21.12.24-01.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.24)
-            </div>
+            <h2>Пятница 21.02.2025 🌸</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1022" class="schedule">
         <div class="card">
-            <h2>Воскресенье 22.12.2024 🌸 <br> Ура отдыхаем! </h2>
+            <h2>Суббота 22.02.2025 🌻</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1023" class="schedule">
         <div class="card">
-            <h2>Понедельник 23.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25)  
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
+            <h2>Воскресенье 23.02.2025 🌸 <br> Ура отдыхаем! </h2>
         </div>
     </div>
-    
+
     <div id="schedule-1024" class="schedule">
-        <div class="card">
-            <h2>Вторник 24.12.2024 🌺</h2>
+        <div class="ekz">
+            <h2>Понедельник 24.02.2025 🌼 <br> Экзамен <br></h2>
             <div class="separator"></div>
             <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1206 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
+                <div class="time">10:00 - 13:00</div> <span class="circle pr">пр</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 1006 </b>
             </div>
         </div>
     </div>
-    
+
     <div id="schedule-1025" class="schedule">
         <div class="card">
-            <h2>Среда <br> 25.12.2024 🌷</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка Интернет приложений Прокопьев Н.А.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 910 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Уравнения математической физики Панкратова О.В.<b> ауд. 1011 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Философия Федотов Д.Л.<b> ауд. 903 (Кремл.16А)</b> (06.11.24-15.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
+            <h2>Вторник 25.02.2025 🌺</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1026" class="schedule">
         <div class="card">
-            <h2>Четверг 26.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Уравнения математической физики Гнеденкова В.Л.<b> ауд. 411 </b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Численные методы Глазырина Л.Л.<b> ауд. 216 </b> (07.11.24-09.01.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1112 </b>
-            </div>
+            <h2>Среда <br> 26.02.2025 🌷</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1027" class="schedule">
         <div class="card">
-            <h2>Пятница 27.12.2024 🌸</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle hz"> -</span> Нейронные сети Гафаров Ф.М.<b> ЦОР </b> (01.11.24-27.12.24)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div> 
+            <h2>Четверг 27.02.2025 🌼</h2>
         </div>
     </div>
-    
+
     <div id="schedule-1028" class="schedule">
         <div class="card">
-            <h2>Суббота 28.12.2024 🌻</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle lek">лек</span> Разработка интернет приложений Прокопьев Н.А.<b> ауд. 216 </b> (21.12.24-01.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование на Java Гатауллин Р.М.<b> ауд. 1111 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (02.11.24-08.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">19:10 - 20:40</div> <span class="circle pr">пр</span> Нейронные сети Хакимов З.Н.<b> ауд. 410 </b> (09.11.24-30.01.25)
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-1029" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 29.12.2024 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    
-    <div id="schedule-1030" class="schedule">
-        <div class="card">
-            <h2>Понедельник 30.12.2024 🌼</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 808 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование в среде 1С Медведева О.А.<b> ауд. 1208 </b>
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Программирование для Web Минуллин Д.А., Гилемзянов А.Ф.<b> ауд. 809, <u> ауд. 810 </u></b>
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Философия Ибрагимова З.З.<b> ауд. 109 </b> (11.11.24-13.01.25) 
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Параллельные вычисления Гилемзянов А.Ф.<b> ауд. 216 </b>
-            </div>
-        </div>
-    </div>
-    
-    <div id="schedule-1031" class="schedule">
-        <div class="card">
-            <h2>Вторник 31.12.2024 🌺</h2>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная лингвистика Гатиатуллин А.Р.<b> ауд. 216 </b>
-            </div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Технологическая практика Минуллин Д.А.<b> ауд. 907 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы Гнеденкова В.Л.<b> ауд. 1206 </b>(17.12.24-04.02.25)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Программирование на Java Маклецов С.В.<b> ауд. 1211 </b>
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz"> -</span> Физкультура
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Параллельные вычисления Минуллин Д.А.<b> ауд. 1111 </b> (05.11.24-14.01.25)
-            </div>
+            <h2>Пятница 28.02.2025 🌸</h2>
         </div>
     </div>
 
     <script>
         function showSchedule(day) {
-            // Скрываем все карточки
             const schedules = document.querySelectorAll('.schedule');
             schedules.forEach(schedule => {
                 schedule.style.display = 'none';
             });
 
-            // Показываем выбранную карточку
             const selectedSchedule = document.getElementById('schedule-' + day);
             selectedSchedule.style.display = 'block';
         }
     </script>
 
-    
+
 </body>
 </html>
