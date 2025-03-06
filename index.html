@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\user\Downloads\Remove-bg.ai_1729611785736.png">
     <link rel="icon" type="image/png" sizes="16x16" href="C:\Users\user\Downloads\Remove-bg.ai_1729611785736.png">
     <title>Расписание</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -18,6 +18,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         h1 {
             text-align: center;
             color: #627f1c;
@@ -25,47 +26,59 @@
             font-size: 2.5em;
             animation: fadeIn 1s;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         .container {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             flex-direction: column;
-            align-items: center; 
+            align-items: center;
         }
+
         .day-circle {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background-color: #67861f;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin: 5px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.2s;
         }
 
-        .day-circle:hover {
-            transform: scale(1.1);
-            background-color: #96c22f;
+            .day-circle:hover {
+                transform: scale(1.1);
+                background-color: #96c22f;
+            }
+
+        .schedule {
+            display: none;
         }
-        .schedule { 
-            display: none; 
-        }
+
         .card.active {
             display: block;
         }
+
         .day-circle-row {
             display: flex;
-            justify-content: center; 
-            margin: 5px 0; 
+            justify-content: center;
+            margin: 5px 0;
         }
+
         .card {
             background-color: #86b85e;
             border-radius: 10px;
@@ -76,78 +89,68 @@
             transition: transform 0.2s, box-shadow 0.3s;
             color: white;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-        .card h2 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            text-align: center;
-        }
 
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.0em;
-            text-align: center;
-            color: WhiteSmoke;
-        }
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .card h2 {
+                margin-bottom: 10px;
+                font-size: 1.8em;
+                text-align: center;
+            }
+
+            .card h3 {
+                margin-bottom: 10px;
+                font-size: 1.0em;
+                text-align: center;
+                color: WhiteSmoke;
+            }
 
         .separator {
-            border-top: 1px solid white; 
+            border-top: 1px solid white;
             margin: 10px 0;
         }
+
         .time {
             color: white;
             font-weight: bold;
         }
+
         .subject {
-            margin-bottom: 18px; 
+            margin-bottom: 18px;
         }
+
         .flower {
             font-size: 1.5em;
             color: #ff66b3;
         }
+
         .circle {
             display: inline-block;
             width: 25px;
             height: 25px;
             border-radius: 50%;
             text-align: center;
-            line-height: 25px; 
+            line-height: 25px;
             font-size: 0.75em;
         }
+
         .lek {
             background-color: #FF69B4;
             color: white;
         }
+
         .pr {
             background-color: #04c9cc;
             color: white;
         }
+
         .hz {
-            background-color: rgb(244, 241, 241); 
-        }
-        .ekz {
-            background-color: rgba(221, 23, 23, 0.67);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.3s;
-            color: white;
-        }
-        .ekz:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background-color: rgb(244, 241, 241);
         }
 
-        .ekz h2 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            text-align: center;
-        }
         .ekz {
             background-color: rgba(221, 23, 23, 0.67);
             border-radius: 10px;
@@ -158,15 +161,40 @@
             transition: transform 0.2s, box-shadow 0.3s;
             color: white;
         }
-        .ekz:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+            .ekz:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .ekz h2 {
+                margin-bottom: 10px;
+                font-size: 1.8em;
+                text-align: center;
+            }
+
+        .ekz {
+            background-color: rgba(221, 23, 23, 0.67);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.3s;
+            color: white;
         }
-        .ekz h2 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            text-align: center;
-        }
+
+            .ekz:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .ekz h2 {
+                margin-bottom: 10px;
+                font-size: 1.8em;
+                text-align: center;
+            }
+
         .day-circle-ekz {
             width: 45px;
             height: 45px;
@@ -181,10 +209,11 @@
             cursor: pointer;
             transition: transform 0.2s, background-color 0.2s;
         }
-        .day-circle-ekz:hover {
-            transform: scale(1.1);
-            background-color: rgba(222, 22, 22, 0.39);
-        }
+
+            .day-circle-ekz:hover {
+                transform: scale(1.1);
+                background-color: rgba(222, 22, 22, 0.39);
+            }
 
         .kons {
             background-color: rgba(215, 181, 109, 0.86);
@@ -196,15 +225,18 @@
             transition: transform 0.2s, box-shadow 0.3s;
             color: white;
         }
-        .kons:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-        .kons h2 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            text-align: center;
-        }
+
+            .kons:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .kons h2 {
+                margin-bottom: 10px;
+                font-size: 1.8em;
+                text-align: center;
+            }
+
         .day-circle-kons {
             width: 45px;
             height: 45px;
@@ -220,10 +252,10 @@
             transition: transform 0.2s, background-color 0.2s;
         }
 
-        .day-circle-kons:hover {
-            transform: scale(1.1);
-            background-color: rgba(224, 190, 118, 0.57);
-        }
+            .day-circle-kons:hover {
+                transform: scale(1.1);
+                background-color: rgba(224, 190, 118, 0.57);
+            }
     </style>
 </head>
 <body>
