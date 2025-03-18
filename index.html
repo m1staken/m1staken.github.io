@@ -3,260 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\user\Downloads\Remove-bg.ai_1729611785736.png">
     <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\user\Downloads\Remove-bg.ai_1729611785736.png">
     <link rel="icon" type="image/png" sizes="16x16" href="C:\Users\user\Downloads\Remove-bg.ai_1729611785736.png">
     <title>Расписание</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom, rgba(218, 205, 208, 0.9), rgba(196, 180, 161, 0.5));
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            text-align: center;
-            color: #627f1c;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .day-circle {
-            width: 40px;
-            height: 40px;
-            background-color: #67861f;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.1em;
-            margin: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-            .day-circle:hover {
-                transform: scale(1.1);
-                background-color: #96c22f;
-            }
-
-        .schedule {
-            display: none;
-        }
-
-        .card.active {
-            display: block;
-        }
-
-        .day-circle-row {
-            display: flex;
-            justify-content: center;
-            margin: 5px 0;
-        }
-
-        .card {
-            background-color: #86b85e;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.3s;
-            color: white;
-        }
-
-            .card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-
-            .card h2 {
-                margin-bottom: 10px;
-                font-size: 1.8em;
-                text-align: center;
-            }
-
-            .card h3 {
-                margin-bottom: 10px;
-                font-size: 1.0em;
-                text-align: center;
-                color: WhiteSmoke;
-            }
-
-        .separator {
-            border-top: 1px solid white;
-            margin: 10px 0;
-        }
-
-        .time {
-            color: white;
-            font-weight: bold;
-        }
-
-        .subject {
-            margin-bottom: 18px;
-        }
-
-        .flower {
-            font-size: 1.5em;
-            color: #ff66b3;
-        }
-
-        .circle {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 25px;
-            font-size: 0.75em;
-        }
-
-        .lek {
-            background-color: #FF69B4;
-            color: white;
-        }
-
-        .pr {
-            background-color: #04c9cc;
-            color: white;
-        }
-
-        .hz {
-            background-color: rgb(244, 241, 241);
-        }
-
-        .ekz {
-            background-color: rgba(221, 23, 23, 0.67);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.3s;
-            color: white;
-        }
-
-            .ekz:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-
-            .ekz h2 {
-                margin-bottom: 10px;
-                font-size: 1.8em;
-                text-align: center;
-            }
-
-        .ekz {
-            background-color: rgba(221, 23, 23, 0.67);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.3s;
-            color: white;
-        }
-
-            .ekz:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-
-            .ekz h2 {
-                margin-bottom: 10px;
-                font-size: 1.8em;
-                text-align: center;
-            }
-
-        .day-circle-ekz {
-            width: 45px;
-            height: 45px;
-            background-color: rgba(221, 23, 23, 0.67);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.2em;
-            margin: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-            .day-circle-ekz:hover {
-                transform: scale(1.1);
-                background-color: rgba(222, 22, 22, 0.39);
-            }
-
-        .kons {
-            background-color: rgba(215, 181, 109, 0.86);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.3s;
-            color: white;
-        }
-
-            .kons:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-
-            .kons h2 {
-                margin-bottom: 10px;
-                font-size: 1.8em;
-                text-align: center;
-            }
-
-        .day-circle-kons {
-            width: 45px;
-            height: 45px;
-            background-color: rgba(215, 181, 109, 0.86);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.2em;
-            margin: 5px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-            .day-circle-kons:hover {
-                transform: scale(1.1);
-                background-color: rgba(224, 190, 118, 0.57);
-            }
-    </style>
 </head>
 <body>
     <h1>Март 2025</h1>
@@ -317,356 +70,358 @@
         </div>
     </div>
 
-    <div id="schedule-0" class="schedule">
-        <h2>Не туда жмешь 🌸 </h2>
-    </div>
-    <div id="schedule-1" class="schedule">
-        <div class="card">
-            <h2>Суббота <br> 01.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    <div id="schedule-2" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 02.03.2025 🌻 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    <div id="schedule-3" class="schedule">
-        <div class="card">
-            <h2>Понедельник 03.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    <div id="schedule-4" class="schedule">
-        <div class="card">
-            <h2>Вторник 04.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    <div id="schedule-5" class="schedule">
-        <div class="card">
-            <h2>Среда 05.03.2025 🌺 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
-    <div id="schedule-6" class="schedule">
-        <div class="card">
-            <h2>Четверг<br> 06.03.2025 🌷 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+    <div class="march-schedule">
+         <div id="schedule-0" class="schedule">
+             <h2>Не туда жмешь 🌸 </h2>
+         </div>
+         <div id="schedule-1" class="schedule">
+             <div class="card">
+                 <h2>Суббота <br> 01.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
+         <div id="schedule-2" class="schedule">
+             <div class="card">
+                 <h2>Воскресенье 02.03.2025 🌻 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
+         <div id="schedule-3" class="schedule">
+             <div class="card">
+                 <h2>Понедельник 03.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
+         <div id="schedule-4" class="schedule">
+             <div class="card">
+                 <h2>Вторник 04.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
+         <div id="schedule-5" class="schedule">
+             <div class="card">
+                 <h2>Среда 05.03.2025 🌺 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
+         <div id="schedule-6" class="schedule">
+             <div class="card">
+                 <h2>Четверг<br> 06.03.2025 🌷 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-7" class="schedule">
-        <div class="card">
-            <h2>Пятница 07.03.2025 🌼 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-7" class="schedule">
+             <div class="card">
+                 <h2>Пятница 07.03.2025 🌼 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-8" class="schedule">
-        <div class="card">
-            <h2>Суббота 08.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-8" class="schedule">
+             <div class="card">
+                 <h2>Суббота 08.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-9" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 09.03.2025 🌻 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-9" class="schedule">
+             <div class="card">
+                 <h2>Воскресенье 09.03.2025 🌻 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-10" class="schedule">
-        <div class="card">
-            <h2>Понедельник 10.03.2025 🌸 </h2>
-            <h3>1 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Многопоточное программирование <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Технологическая практика <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-10" class="schedule">
+             <div class="card">
+                 <h2>Понедельник 10.03.2025 🌸 </h2>
+                 <h3>1 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Многопоточное программирование <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Технологическая практика <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-11" class="schedule">
-        <div class="card">
-            <h2>Вторник 11.03.2025 🌼 </h2>
-            <h3>1 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-11" class="schedule">
+             <div class="card">
+                 <h2>Вторник 11.03.2025 🌼 </h2>
+                 <h3>1 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-12" class="schedule">
-        <div class="card">
-            <h2>Среда 12.03.2025 🌺 </h2>
-            <h3>1 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ  <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-12" class="schedule">
+             <div class="card">
+                 <h2>Среда 12.03.2025 🌺 </h2>
+                 <h3>1 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ  <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-13" class="schedule">
-        <div class="card">
-            <h2>Четверг <br> 13.03.2025 🌷</h2>
-            <h3>1 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная графика и дизайн. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Численные методы. <br> Глазырина Л.Л. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 907 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-13" class="schedule">
+             <div class="card">
+                 <h2>Четверг <br> 13.03.2025 🌷</h2>
+                 <h3>1 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная графика и дизайн. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Численные методы. <br> Глазырина Л.Л. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 907 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-14" class="schedule">
-        <div class="card">
-            <h2>Пятница 14.03.2025 🌼</h2>
-            <h3>1 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Теория автоматов и формальных языков. <br> Минуллин Д.А. <b> ауд. 1208 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-14" class="schedule">
+             <div class="card">
+                 <h2>Пятница 14.03.2025 🌼</h2>
+                 <h3>1 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Теория автоматов и формальных языков. <br> Минуллин Д.А. <b> ауд. 1208 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-15" class="schedule">
-        <div class="card">
-            <h2>Суббота <br> 15.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-15" class="schedule">
+             <div class="card">
+                 <h2>Суббота <br> 15.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-16" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 16.03.2025 🌻 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-16" class="schedule">
+             <div class="card">
+                 <h2>Воскресенье 16.03.2025 🌻 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-17" class="schedule">
-        <div class="card active">
-            <h2>Понедельник 17.03.2025 🌸</h2>
-            <h3>2 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная графика и дизайн.  <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-17" class="schedule">
+             <div class="card active">
+                 <h2>Понедельник 17.03.2025 🌸</h2>
+                 <h3>2 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная графика и дизайн.  <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-18" class="schedule">
-        <div class="card">
-            <h2>Вторник 18.03.2025 🌼</h2>
-            <h3>2 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 1206 </b> (2-14 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-18" class="schedule">
+             <div class="card">
+                 <h2>Вторник 18.03.2025 🌼</h2>
+                 <h3>2 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 1206 </b> (2-14 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-19" class="schedule">
-        <div class="card">
-            <h2>Среда 19.03.2025 🌺 </h2>
-            <h3>2 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-19" class="schedule">
+             <div class="card">
+                 <h2>Среда 19.03.2025 🌺 </h2>
+                 <h3>2 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-20" class="schedule">
-        <div class="card">
-            <h2>Четверг <br> 20.03.2025 🌷</h2>
-            <h3>2 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (2-14 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Теория автоматов и формальных языков. <br> Невзорова О.А. <b> ауд. 216 </b> (2-14 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-20" class="schedule">
+             <div class="card">
+                 <h2>Четверг <br> 20.03.2025 🌷</h2>
+                 <h3>2 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (2-14 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Теория автоматов и формальных языков. <br> Невзорова О.А. <b> ауд. 216 </b> (2-14 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-21" class="schedule">
-        <div class="card">
-            <h2>Пятница 21.03.2025 🌼</h2>
-            <h3>2 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Многопоточное программирование. <br> Миннулин Д.А. <b> ауд. 1208 </b> (2-14 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-21" class="schedule">
+             <div class="card">
+                 <h2>Пятница 21.03.2025 🌼</h2>
+                 <h3>2 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Многопоточное программирование. <br> Миннулин Д.А. <b> ауд. 1208 </b> (2-14 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-22" class="schedule">
-        <div class="card">
-            <h2>Суббота 22.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-22" class="schedule">
+             <div class="card">
+                 <h2>Суббота 22.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-23" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 23.03.2025 🌻 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-23" class="schedule">
+             <div class="card">
+                 <h2>Воскресенье 23.03.2025 🌻 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-24" class="schedule">
-        <div class="card active">
-            <h2>Понедельник 24.03.2025 🌸 </h2>
-            <h3>3 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Многопоточное программирование. <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Технологическая практика. <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-24" class="schedule">
+             <div class="card active">
+                 <h2>Понедельник 24.03.2025 🌸 </h2>
+                 <h3>3 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Многопоточное программирование. <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Технологическая практика. <br> Минуллин Д.А. <b> ауд. 910 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-25" class="schedule">
-        <div class="card">
-            <h2>Вторник 25.03.2025 🌼</h2>
-            <h3>3 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-25" class="schedule">
+             <div class="card">
+                 <h2>Вторник 25.03.2025 🌼</h2>
+                 <h3>3 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">10:10 - 11:40</div> <span class="circle pr">пр</span> Программирование для Web <br> Гилемзянов А.Ф. <b> ауд. 802 </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-26" class="schedule">
-        <div class="card">
-            <h2>Среда 26.03.2025 🌺 </h2>
-            <h3>3 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-26" class="schedule">
+             <div class="card">
+                 <h2>Среда 26.03.2025 🌺 </h2>
+                 <h3>3 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> ОБЖ <br> Хабибрахманов И.И. <b> ауд. 1006 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle lek">лек</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-27" class="schedule">
-        <div class="card">
-            <h2>Четверг <br> 27.03.2025 🌷</h2>
-            <h3>3 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная графика и дизайн. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Численные методы. <br> Глазырина Л.Л. <b> ауд. 216 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 907 </b> (1-15 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-27" class="schedule">
+             <div class="card">
+                 <h2>Четверг <br> 27.03.2025 🌷</h2>
+                 <h3>3 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">08:30 - 10:00</div> <span class="circle lek">лек</span> Компьютерная графика и дизайн. <br> Миннегалиева Ч.Б. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Управление данными.  <br> Аюпов М.М. <b> ауд. 1208 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle lek">лек</span> Численные методы. <br> Глазырина Л.Л. <b> ауд. 216 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle lek">лек</span> Проектирование баз данных. <br> Гилемзянов А.Ф. <b> ауд. 907 </b> (1-15 неделя)
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-28" class="schedule">
-        <div class="card">
-            <h2>Пятница 28.03.2025 🌼</h2>
-            <h3>3 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Теория автоматов и формальных языков. <br> Минуллин Д.А. <b> ауд. 1208 </b> (1-15 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
-            </div>
-        </div>
-    </div>
+         <div id="schedule-28" class="schedule">
+             <div class="card">
+                 <h2>Пятница 28.03.2025 🌼</h2>
+                 <h3>3 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">12:10 - 13:40</div> <span class="circle pr">пр</span> Численные методы. <br> Гнеденкова В.Л. <b> ауд. 802 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">13:50 - 15:20</div> <span class="circle pr">пр</span> Теория автоматов и формальных языков. <br> Минуллин Д.А. <b> ауд. 1208 </b> (1-15 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">16:00 - 17:30</div> <span class="circle hz">-</span> Физкультура
+                 </div>
+             </div>
+         </div>
 
-    <div id="schedule-29" class="schedule">
-        <div class="card">
-            <h2>Суббота 29.03.2025 🌸 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-29" class="schedule">
+             <div class="card">
+                 <h2>Суббота 29.03.2025 🌸 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-30" class="schedule">
-        <div class="card">
-            <h2>Воскресенье 30.03.2025 🌻 <br> Ура отдыхаем! </h2>
-        </div>
-    </div>
+         <div id="schedule-30" class="schedule">
+             <div class="card">
+                 <h2>Воскресенье 30.03.2025 🌻 <br> Ура отдыхаем! </h2>
+             </div>
+         </div>
 
-    <div id="schedule-31" class="schedule">
-        <div class="card">
-            <h2>Понедельник 31.03.2025 🌸</h2>
-            <h3>4 неделя </h3>
-            <div class="separator"></div>
-            <div class="subject">
-                <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная графика и дизайн.  <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
-            </div>
-            <div class="subject">
-                <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
-            </div>
-        </div>
-    </div>
+         <div id="schedule-31" class="schedule">
+             <div class="card">
+                 <h2>Понедельник 31.03.2025 🌸</h2>
+                 <h3>4 неделя </h3>
+                 <div class="separator"></div>
+                 <div class="subject">
+                     <div class="time">8:30 - 10:00</div> <span class="circle hz"></span> ЦОР Многопоточное программирование. <br> Гилемзянов А.Ф. <b> </b> (1-9 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">15:50 - 17:20</div> <span class="circle pr">пр</span> Компьютерная графика и дизайн.  <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
+                 </div>
+                 <div class="subject">
+                     <div class="time">17:30 - 19:00</div> <span class="circle pr">пр</span> Мультимедиа технологии в образовании. <br> Миннегалиева Ч.Б. <b> ауд. 1112 </b> (2-14 неделя)
+                 </div>
+             </div>
+         </div>
+     </div>
 
     <h1>Апрель 2025</h1>
     <div class="container">
@@ -1153,18 +908,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function showSchedule(day) {
-            const schedules = document.querySelectorAll('.schedule');
-            schedules.forEach(schedule => {
-                schedule.style.display = 'none';
-            });
-
-            const selectedSchedule = document.getElementById('schedule-' + day);
-            selectedSchedule.style.display = 'block';
-        }
-    </script>
 
 
 </body>
